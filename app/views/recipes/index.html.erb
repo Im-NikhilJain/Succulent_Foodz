@@ -46,8 +46,7 @@
                   <ul class="blog-info">
                     <li><i class="fa fa-calendar"></i><%= recipe.updated_at.strftime(" %d/%m/%Y") %></li>
                     <li><i class="fa fa-comments"></i><span>  </span><%= recipe.comments.count %></li>
-                    <!--<li><i class="fa fa-tags"></i> Tags</li>-->
-                  </ul>
+                    <!--<li><i class="fa fa-tags"></i> Tags</li>--></ul>
                   <p><%= recipe.about_recipe %></p>
                   <%= link_to "Read More"  , url_for(controller: :recipes , action: :show , id: recipe.id) , method: :get ,  class:"more" %> <i class="icon-angle-right"></i>
                 </div>
