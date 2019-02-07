@@ -159,6 +159,9 @@ Devise.setup do |config|
   # Range for password length.
   config.password_length = 6..128
 
+  config.secret_key = '-- secret key --'
+  
+
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
