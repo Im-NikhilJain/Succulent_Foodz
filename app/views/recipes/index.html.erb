@@ -1,0 +1,138 @@
+
+<div class="main">
+  <div class="container">
+
+    <!-- BEGIN SIDEBAR & CONTENT -->
+    <div class="row margin-bottom-40">
+      <!-- BEGIN CONTENT -->
+      <div class="col-md-12 col-sm-12">
+        <h1>Recipes</h1>
+        <div class="content-page">
+          <div class="row">
+            <!-- BEGIN LEFT SIDEBAR -->
+            <div class="col-md-9 col-sm-9 blog-posts">
+              <% @recipes.each do |recipe| %>
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                  <!-- BEGIN CAROUSEL -->
+                  <div class="front-carousel">
+                    <div class="carousel slide" id="<%= recipe.id %>">
+                      <!-- Carousel items -->
+                      <div class="carousel-inner margin-top-30">
+                        <div class="item">
+                          <%= image_tag recipe.image_2.url(:medium) %>
+                        </div>
+                        <div class="item">
+                          <iframe height="153" allowfullscreen="" style="width:100%; border:0" src="http://player.vimeo.com/video/56974716?portrait=0"></iframe>
+
+                        </div>
+                        <div class="item active">
+                          <%= image_tag recipe.image_1.url(:medium) %>
+                        </div>
+                      </div>
+                      <!-- Carousel nav -->
+                      <a data-slide="prev" href="#<%= recipe.id %>" class="carousel-control left">
+                        <i class="fa fa-angle-left"></i>
+                      </a>
+                      <a data-slide="next" href="#<%= recipe.id %>" class="carousel-control right">
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- END CAROUSEL -->
+                </div>
+                <div class="col-md-8 col-sm-8">
+                  <h2><%= link_to recipe.recipe_name , url_for(controller: :recipes , action: :show , id: recipe.id) , method: :get , class: "blog-title" %></h2>
+                  <ul class="blog-info">
+                    <li><i class="fa fa-calendar"></i><%= recipe.updated_at.strftime(" %d/%m/%Y") %></li>
+                    <li><i class="fa fa-comments"></i><span>  </span><%= recipe.comments.count %></li>
+                    <!--<li><i class="fa fa-tags"></i> Tags</li>-->
+                  </ul>
+                  <p><%= recipe.about_recipe %></p>
+                  <%= link_to "Read More"  , url_for(controller: :recipes , action: :show , id: recipe.id) , method: :get ,  class:"more" %> <i class="icon-angle-right"></i>
+                </div>
+              </div>
+                <hr class="blog-post-sep">
+
+                <% end %>
+
+              <%= paginate @recipes %>
+
+             </div>
+            <!-- END LEFT SIDEBAR -->
+
+            <!-- BEGIN RIGHT SIDEBAR -->
+            <div class="col-md-3 col-sm-3 blog-sidebar">
+              <!-- CATEGORIES START -->
+              <h2 class="no-top-space">Categories</h2>
+              <ul class="nav sidebar-categories margin-bottom-40">
+                <% @categories.each do |category| %>
+                <li><%= link_to category.category_name , url_for(controller: :categories , action: :show , id: category.id) , method: :get %>
+
+                </li>
+               <% end %>
+              </ul>
+              <!-- CATEGORIES END -->
+
+              <!-- BEGIN RECENT NEWS -->
+              <h2>Recent News</h2>
+              <div class="recent-news margin-bottom-10">
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img2-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Letiusto gnissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img1-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Deiusto anissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img3-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Tesiusto baissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+              </div>
+              <!-- END RECENT NEWS -->
+
+
+              <!-- BEGIN BLOG PHOTOS STREAM -->
+              <div class="blog-photo-stream margin-bottom-20">
+                <h2>Photos Stream</h2>
+                <ul class="list-unstyled">
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img5-small.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img1.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img4-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img6.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/pics/img1-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/pics/img2-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img3.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img2-large.jpg"></a></li>
+                </ul>
+              </div>
+              <!-- END BLOG PHOTOS STREAM -->
+
+
+              <!-- END RIGHT SIDEBAR -->
+            </div>
+          </div>
+        </div>
+        <!-- END CONTENT -->
+      </div>
+      <!-- END SIDEBAR & CONTENT -->
+    </div>
+  </div>
+
+</div>

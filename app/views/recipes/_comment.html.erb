@@ -1,0 +1,15 @@
+
+  <div class="media">
+    <a href="javascript:;" class="pull-left">
+      <%= image_tag asset_path("Avatar.png") , class: "media-object" %>
+    </a>
+    <div class="media-body">
+
+      <% time_diff = Time.now - comment.created_at %>
+      <h4 class="media-heading"> <%= comment.Name %> <span> <%=  Time.at(time_diff.to_i.abs).utc.strftime "%H:%M hr Ago" %>
+                      </span></h4>
+
+      <%= comment.Message %>
+
+    </div>
+  </div>

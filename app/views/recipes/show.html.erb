@@ -1,0 +1,254 @@
+
+
+<div class="main">
+  <div class="container">
+
+    <!-- BEGIN SIDEBAR & CONTENT -->
+    <div class="row margin-bottom-40">
+      <!-- BEGIN CONTENT -->
+      <div class="col-md-12 col-sm-12">
+
+        <h1><%= @recipe.recipe_name %></h1>
+
+
+
+
+        <div class="content-page">
+          <div class="row">
+            <!-- BEGIN LEFT SIDEBAR -->
+            <div class="col-md-9 col-sm-9 blog-item">
+
+
+              <div class="blog-item-img">
+                <!-- BEGIN CAROUSEL -->
+                <div class="front-carousel">
+                  <div id="myCarousel" class="carousel slide">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="item">
+                        <%= image_tag @recipe.image_3.url(:medium) ,size: "1000x300"  %>
+                      </div>
+                      <div class="item">
+                        <!-- BEGIN VIDEO -->
+                        <iframe src="http://player.vimeo.com/video/56974716?portrait=0" style="width:100%; border:0" allowfullscreen="" height="561"></iframe>
+                        <!-- END VIDEO -->
+                      </div>
+                      <div class="item active">
+                        <%= image_tag @recipe.image_1.url(:medium) ,size: "1000x300"  %>
+                      </div>
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- END CAROUSEL -->
+              </div>
+
+              <ul class = "blog-info social ">
+                <li> <strong>Prepration Time : </strong><%= @recipe.Prep_time %></li>
+                <li> <strong>Cooking Time : </strong><%= @recipe.cook_time %></li>
+                <li> <strong> Serving : </strong><%= @recipe.servings %></li>
+                <li>   <a id="share-fb" class="sharer button"><i class="fa fa-1x fa-facebook-square"></i></a> </li>
+                <li>  <a  id="share-tw" class="sharer button"><i class="fa fa-1x fa-twitter-square"></i></a> </li>
+                <li>  <a  id="share-li" class="sharer button"><i class="fa fa-1x fa-linkedin-square"></i></a> </li>
+                <li>  <a  id="share-gp" class="sharer button"><i class="fa fa-1x fa-google-plus-square"></i></a> </li>
+                <li>  <a  id="share-em" class="sharer button"><i class="fa fa-1x fa-envelope-square"></i></a> </li>
+              </ul>
+
+
+
+              <h3> <strong>About Recipe :</strong> </h3>
+              <br>
+
+              <p><%= @recipe.about_recipe %></p>
+
+              <h3>  <strong> Ingredients : </strong> </h3>
+              <br>
+
+              <% @recipe.ingredients.split("$").each do |ingredient| %>
+                <ul>
+                  <li>
+                    <%= ingredient %>
+                  </li>
+                </ul>
+                <% end %>
+
+              <h3 >  <strong> Instruction : </strong> </h3>
+              <br>
+              <% @recipe.instruc.split("$").each do |instruction| %>
+
+                    <p>
+                      <%= instruction %>
+                    </p>
+
+                <% end %>
+
+              <ul class="blog-info">
+                <li><i class="fa fa-user"></i> By Succulent Foodz</li>
+                <li><i class="fa fa-calendar"></i><%= @recipe.updated_at.strftime(" Posting On %d/%m/%Y") %></li>
+                <li><i class="fa fa-comments"></i> 17</li>
+
+              </ul>
+
+              <h2>Comments</h2>
+              <div class="comments">
+
+                <% @recipe.comments.order(created_at: :desc).each do |comment| %>
+
+                <%= render 'recipes/comment' , comment: comment %>
+
+                  <% end %>
+
+              </div>
+              <div class="post-comment padding-top-40">
+                <h3>Leave a Comment</h3>
+                <%= form_for (@comment) , remote: :true do |f| %>
+                  <div class="form-group">
+                    <%= f.label :Name %>
+                    <%= f.text_field :Name , class: "form-control" %>
+                  </div>
+
+                <div class="form-group">
+                  <%= f.label :Email %>
+                  <%= f.email_field :Email , class: "form-control" %>
+                </div>
+
+
+                  <div class="form-group">
+                    <%= f.label :Message %>
+                    <%= f.text_area :Message  , class: "form-control" %>
+                  </div>
+
+                  <%= f.hidden_field :recipe_id , value: @recipe.id %>
+
+                  <p><button class="btn btn-primary" type="submit">Post a Comment</button></p>
+
+                <% end %>
+              </div>
+            </div>
+            <!-- END LEFT SIDEBAR -->
+
+            <!-- BEGIN RIGHT SIDEBAR -->
+            <div class="col-md-3 col-sm-3 blog-sidebar">
+              <!-- CATEGORIES START -->
+              <h2 class="no-top-space">Categories</h2>
+              <ul class="nav sidebar-categories margin-bottom-40">
+                <% @categories.each do |category| %>
+                  <li><%= link_to category.category_name , url_for(controller: :categories , action: :show , id: category.id) , method: :get %>
+
+                  </li>
+                <% end %>
+              </ul>
+
+              <!-- BEGIN RECENT NEWS -->
+              <h2>Recent News</h2>
+              <div class="recent-news margin-bottom-10">
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img2-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Letiusto gnissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img1-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Deiusto anissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col-md-3">
+                    <img class="img-responsive" alt="" src="assets/pages/img/people/img3-large.jpg">
+                  </div>
+                  <div class="col-md-9 recent-news-inner">
+                    <h3><a href="javascript:;">Tesiusto baissimos</a></h3>
+                    <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                  </div>
+                </div>
+              </div>
+              <!-- END RECENT NEWS -->
+
+
+              <!-- BEGIN BLOG PHOTOS STREAM -->
+              <div class="blog-photo-stream margin-bottom-20">
+                <h2>Photos Stream</h2>
+                <ul class="list-unstyled">
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img5-small.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img1.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img4-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img6.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/pics/img1-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/pics/img2-large.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/works/img3.jpg"></a></li>
+                  <li><a href="javascript:;"><img alt="" src="assets/pages/img/people/img2-large.jpg"></a></li>
+                </ul>
+              </div>
+              <!-- END BLOG PHOTOS STREAM -->
+
+            </div>
+            <!-- END BLOG PHOTOS STREAM -->
+
+
+            <!-- END RIGHT SIDEBAR -->
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT
+    </div>
+    <!-- END SIDEBAR & CONTENT -->
+  </div>
+</div>
+</div>
+
+
+
+<!--<div class="container">-->
+
+  <!--<button class="sharer button" data-sharer="facebook" data-url="http://localhost:3000/recipes/1">Share on Facebook</button>-->
+<!--</div>-->
+
+<script>
+
+    //Prevent basic click behavior
+    $(".sharer button").click(function () {
+        event.preventDefault();
+    });
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+// Uses sharer.js
+//  https://ellisonleao.github.io/sharer.js/#twitter
+        var url = window.location.href;
+        var title = document.title;
+        var subject = "Read this good article";
+        var via = "";
+        console.log(url);
+        console.log(title);
+
+
+//facebook
+        $('#share-fb').attr('data-url', url).attr('data-sharer', 'facebook');
+//twitter
+        $('#share-tw').attr('data-url', url).attr('data-title', title).attr('data-via', via).attr('data-sharer', 'twitter');
+//linkedin
+        $('#share-li').attr('data-url', url).attr('data-sharer', 'linkedin');
+// google plus
+        $('#share-gp').attr('data-url', url).attr('data-title', title).attr('data-sharer', 'googleplus');
+        // email
+        $('#share-em').attr('data-url', url).attr('data-title', title).attr('data-subject', subject).attr('data-sharer', 'email');
+
+
+
+
+    })
+</script>

@@ -1,0 +1,100 @@
+
+
+
+/*main_portfolio_content_area*/
+.portfolio{}
+.main_portfolio{}
+.main_portfolio_content_area{}
+
+.head_title {
+
+    margin-bottom: 30px;
+}
+
+
+
+/* mixitup section */
+
+
+.main_mixi_content{
+    max-height: 900px;
+
+}
+.main_mix_menu{
+    margin-bottom:50px;
+}
+.main_mix_menu ul li.btn{
+    min-width:150px;
+    height:35px;
+    padding: .2rem;
+    border:1px solid #ddd;
+}
+.main_mix_menu ul li.btn-primary {
+    background-color: transparent;
+    transition: .5s;
+    color: #223d61;
+}
+.main_mix_menu ul li.active {
+    background: #5e9a28;
+    color:#fff;
+}
+
+
+
+.single_mixi_portfolio{
+    position:relative;
+    float: left;
+    border: 3px solid #fff;
+    width:100%;
+}
+.single_mixi_portfolio img{
+    width:100%;
+    height: 230px;
+}
+.single_mixi_portfolio:hover .mixi_portfolio_overlay{
+    opacity:1;
+}
+.mixi_portfolio_overlay{
+    background:rgba(236, 228, 217, 0.75);
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    transition:.5s;
+    opacity:0;
+}
+.mixi_portfolio_overlay .overflow_hover_text{
+    position: absolute;
+    top: 17%;
+    left: 13%;
+    width: 75%;
+}
+.mixi_portfolio_overlay .overflow_hover_text i{
+    color:#223d61;
+    font-size: 40px;
+}
+.mixi_portfolio_overlay .overflow_hover_text h2{
+    color:#223d61;
+    font-size:22px;
+    margin-bottom: 0px;
+}
+.mixi_portfolio_overlay .overflow_hover_text p{
+    color:#5e9a28;
+}
+
+
+.mixcontent .mix{
+    display: none;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-origin: 50% 0;
+}
+
+.portfolio_btn_area{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+

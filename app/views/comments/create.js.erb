@@ -1,0 +1,7 @@
+
+$("#comment_Name").val(" ");
+$("#comment_Email").val(" ");
+$("#comment_Message").val(" ");
+
+$(".comments").prepend
+("<%= escape_javascript ( render 'recipes/comment',{ comment: @comment } ) %>");
