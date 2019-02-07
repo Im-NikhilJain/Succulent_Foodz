@@ -22,7 +22,7 @@ gem 'kaminari'
 
 
 
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise'
 
 gem 'activeadmin'
 
