@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0231c045-4af0-4d68-a82b-01dda7d3f044" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-b471045ffcd09f588e3a762f6c8b0aea.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-87a7d154d6a278c42d73a75f01b74929c44d85a07234d8248984274c108df1d1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-87a7d154d6a278c42d73a75f01b74929c44d85a07234d8248984274c108df1d1.js.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-f56e6464d9ede2bb738219b829c1bd339e9646c928b59284ccb8ac2d8f2be78e.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-f56e6464d9ede2bb738219b829c1bd339e9646c928b59284ccb8ac2d8f2be78e.css.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_skin/default_logo-d59b61453e0b8e5c6713a61a8b199a12288aa33e75f91db273067afffed549e8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-1827b7d444b8bcda2e51964739c7d256a7d2e0697bdbae4d4391348d0a1f2b52.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-1827b7d444b8bcda2e51964739c7d256a7d2e0697bdbae4d4391348d0a1f2b52.css.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-9ad4e3fb2eb298d88abfca6cdb57cf0dd22669d876f8ba65336fa2ea2b93a66a.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-9ad4e3fb2eb298d88abfca6cdb57cf0dd22669d876f8ba65336fa2ea2b93a66a.js.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" />
       <change beforePath="$PROJECT_DIR$/.idea/succulent_foodz.iml" afterPath="$PROJECT_DIR$/.idea/succulent_foodz.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/app/views/recipes/index.html.erb" afterPath="$PROJECT_DIR$/app/views/recipes/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
-      <change beforePath="$PROJECT_DIR$/ruby-getting-started" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -92,11 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="28">
-              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+              <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_nav.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -178,7 +159,6 @@
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/categories_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/admin/admin_users.rb" />
         <option value="$PROJECT_DIR$/app/models/recipe.rb" />
         <option value="$PROJECT_DIR$/app/views/home/_feedback.html.erb" />
@@ -187,6 +167,7 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
       </list>
     </option>
   </component>
@@ -472,12 +453,12 @@
       <workItem from="1522402163197" duration="3227000" />
       <workItem from="1533931394569" duration="752000" />
       <workItem from="1536601742608" duration="1216000" />
-      <workItem from="1549548242936" duration="5397000" />
+      <workItem from="1549548242936" duration="6225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56999000" />
+    <option name="totallyTimeSpent" value="57827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="704" extended-state="6" />
@@ -589,13 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -889,7 +863,15 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding />
         </state>
       </provider>
